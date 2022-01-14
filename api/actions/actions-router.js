@@ -44,6 +44,13 @@ router.get("/", (req, res) => {
     }
   });
 
+  router.delete("/:id", errorFourOFour, async (req, res, next) => {
+    try {
+      const actionsDeleteo = await Actions.remove(req.params.id);
+      res.status(200).json(actionsDeleteo);
+    } catch (err) {
+      next(err);
+    }
+  });
 
-  
 module.exports = router;
