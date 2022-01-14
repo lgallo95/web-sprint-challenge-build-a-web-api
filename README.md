@@ -18,9 +18,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 ### Task 1: Project Set Up
 
-- [ ] Run `npm install` to install your dependencies.
-- [ ] Run tests locally executing `npm test`.
-- [ ] Reset the database to its original state executing `npm run resetdb`.
+- [x] Run `npm install` to install your dependencies.
+- [x] Run tests locally executing `npm test`.
+- [x] Reset the database to its original state executing `npm run resetdb`.
 
 ### Task 2: Project Requirements (MVP)
 
@@ -31,21 +31,21 @@ Your finished project must include all of the following requirements:
 A _"test"_ script already exists you can use to run tests against your code.
 A _"resetdb"_ script exists that allows you to reset the database to its original state.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
-- [ ] Install _nodemon_ as a development dependency that would not be used in production.
+- [x] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [x] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
+- [x] Install _nodemon_ as a development dependency that would not be used in production.
 
 #### Environment Variables
 
-- [ ] Bring the port number from the `process.env` variable, falling back to `9000` if `process.env.PORT` is undefined **!!!**
+- [x] Bring the port number from the `process.env` variable, falling back to `9000` if `process.env.PORT` is undefined **!!!**
 
 #### Endpoints
 
 Inside `api/projects/projects-router.js` build the following endpoints:
 
-- [ ] `[GET] /api/projects`
+<!-- - [x] `[GET] /api/projects`
   - Returns an array of projects as the body of the response.
-  - If there are no projects it responds with an empty array.
+  - If there are no projects it responds with an empty array. -->
 - [ ] `[GET] /api/projects/:id`
   - Returns a project with the given `id` as the body of the response.
   - If there is no project with the given `id` it responds with a status code 404.
@@ -147,7 +147,28 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+We will use Node to write server code. Specifically, web services that communicate with clients using the JavaScript Object Notation (JSON) format for data interchange. Express, a light and unopinionated framework that sits on top of Node.js, making it easier to create web applications and services. Sending an HTML file or image is now a one-line task with the sendFile helper method in Express.
+
 1. Understand and explain the use of Middleware.
+
+Middleware helps developers build applications more efficiently. It acts like the connective tissue between applications, data, and users.
+
 1. The basic principles of the REST architectural style.
+
+  -client-server architecture.
+  -stateless architecture.
+  -cacheable.
+  -layered system.
+  -code on demand.
+  -uniform interfaces.
+  -HATEOAS (Hypermedia As The Engine Of Application State). 
+
+
 1. Understand and explain the use of Express Routers.
+
+An Express Router behaves like a mini Express application. It can have its own Routing and Middleware, but it needs to exist inside an Express application. Think of routers as a way of organizing Express applications–you write separate pieces that can later be composed together.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+It sends the certain request needed to check if it works
